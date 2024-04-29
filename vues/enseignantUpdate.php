@@ -66,8 +66,13 @@
                 <input type="file" class="form-control" name="photo" placeholder="Entrer le prenom de l'enseignant" value='<?= $utilisateurs[0]["photo"] ?>'>
             </div>
             <div class="form-group">
+            
                 <label for="exampleInputEmail1">role </label>
-                <input type="text" class="form-control" name="role" value='<?= $utilisateurs[0]["role"] ?>' readonly>
+                <select class="form-control"  name="role">
+                    
+                    <option value="<?= $utilisateurs[0]["role"] ?>"><?= $utilisateurs[0]["role"] ?></option>
+                    <option value="admin">administrateur</option>
+                </select>
             </div>   
 
 

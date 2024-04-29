@@ -53,7 +53,6 @@
         }
     </style>
     <?php
-
     if (isset($_SESSION["msg"])) {
         $message = $_SESSION["msg"];
         unset($_SESSION["msg"]);
@@ -93,18 +92,7 @@
 
                             <li class="divider"></li>
 
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-user fa-fw pull-right"></i>
-                                    Profile
-                                </a>
-                                <a data-toggle="modal" href="#modal-user-settings">
-                                    <i class="fa fa-cog fa-fw pull-right"></i>
-                                    Settings
-                                </a>
-                            </li>
-
-                            <li class="divider"></li>
+                            
 
                             <li>
                                 <a href="vues/deconnexion.php"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
@@ -284,8 +272,17 @@
                     case 'enseignantDelete':
                         require_once 'enseignantDelete.php';
                         break;
-                    case 'historique':
-                        require_once 'historique.php';
+                    case 'formationApp':
+                        require_once 'formationApp.php';
+                        break;
+                    case 'coursApp':
+                        require_once 'coursApp.php';
+                        break;
+                    case 'quizApp':
+                        require_once 'quizApp.php';
+                        break;
+                    case 'quizRepond':
+                        require_once 'quizRepond.php';
                         break;
                     
                     default:
